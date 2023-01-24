@@ -1,0 +1,22 @@
+dependencies:
+ - aave/aave-v3-core@1.17.1
+
+compiler:
+  solc:
+    remappings:
+      - '@aave=aave/aave-v3-core@1.17.1'
+
+networks:
+  default: goerli
+  goerli:
+    dai_token: '0xBa8DCeD3512925e52FE67b1b5329187589072A55'
+    weth_token: '0xCCB14936C2E000ED8393A571D15A2672537838Ad'
+    pool_address_provider: '0xC911B590248d127aD18546B186cC6B324e99F02c'
+    dai_usd_price_feed: '0x0d79df66BE487753B02D015Fb622DED7f0E9798d'
+  mainnet-fork:
+    weth_token: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
+  mainnet: 
+    weth_token: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
+dotenv: .env
+wallets:
+  from_key: ${mySignature}
